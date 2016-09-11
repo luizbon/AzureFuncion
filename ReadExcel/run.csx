@@ -8,7 +8,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TextRe
     var lines = new List<string>();
 
     string line;
-    while ((line = input.ReadLine()) != null)
+    while ((line = await input.ReadLineAsync()) != null)
     {
         lines.Add(line);
     }
