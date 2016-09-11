@@ -1,3 +1,4 @@
+using System;
 using System.Net;
 using System.Threading.Tasks;
 using Newtonsoft.Json.Linq;
@@ -11,6 +12,10 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TextRe
     {
         lines.Add(line);
     }
+
+    static Random rnd = new Random();
+
+    int r = rnd.Next(lines.Count);
     
-    return req.CreateResponse(HttpStatusCode.OK, new JArray(lines.ToArray()));
+    return req.CreateResponse(HttpStatusCode.OK, lines.ToArray()[r]);
 }
