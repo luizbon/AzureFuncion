@@ -13,7 +13,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TextRe
         lines.Add(line);
     }
 
-    static Random rnd = new Random();
+    Random rnd = new Random();
 
     int r = rnd.Next(lines.Count);
     
