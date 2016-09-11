@@ -1,6 +1,6 @@
 using System.Net;
 using System.Threading.Tasks;
-using Newtonsoft.Json;
+using Newtonsoft.Json.Linq;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TextReader input, TraceWriter log)
 {
