@@ -1,0 +1,23 @@
+{
+  "bindings": [
+    {
+      "type": "httpTrigger",
+      "name": "req",
+      "direction": "in",
+      "authLevel": "anonymous"
+    },
+    {
+      "name": "res",
+      "type": "http",
+      "direction": "out"
+    },
+    {
+      "type": "apiHubFile",
+      "name": "input",
+      "path": "Yammer/RBOC.xlsx",
+      "connection": "onedriveforbusiness_ONEDRIVEFORBUSINESS",
+      "direction": "in"
+    }
+  ],
+  "disabled": false
+}
