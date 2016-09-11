@@ -14,7 +14,7 @@
     {
       "type": "apiHubFile",
       "name": "input",
-      "path": "Yammer/RBOC.xlsx",
+      "path": "Yammer/rboc.txt",
       "connection": "onedriveforbusiness_ONEDRIVEFORBUSINESS",
       "direction": "in"
     }
