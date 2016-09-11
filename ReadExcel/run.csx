@@ -3,9 +3,13 @@ using System.Threading.Tasks;
 
 public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TextReader input, TraceWriter log)
 {
-    log.Verbose(input.GetType().Name);
+    var lines = new List<string>();
+
+    string line;
+    while ((line = input.ReadLine()) != null)
+    {
+        lines.Add(line);
+    }
     
-    var txt = input.ReadToEnd();
-    
-    return req.CreateResponse(HttpStatusCode.OK, txt);
+    return req.CreateResponse(HttpStatusCode.OK, new JArray(lines.ToArray()));
 }
