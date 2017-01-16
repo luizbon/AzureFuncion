@@ -8,6 +8,7 @@ using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.IO;
 using System.Drawing;
+using System.Configuration;
 using Newtonsoft.Json;
 using ImageProcessor;
 using ImageProcessor.Imaging;
@@ -47,7 +48,7 @@ public static async Task<HttpResponseMessage> Run(HttpRequestMessage req, TraceW
 
         using (MemoryStream faceStream = new MemoryStream(imageBytes))
         {
-            var faceServiceClient = new FaceServiceClient("f38bd900f0314eef9b2566352645036e");
+            var faceServiceClient = new FaceServiceClient(ConfigurationManager.AppSettings["FaceAPI"]);
 
             faces = await faceServiceClient.DetectAsync(faceStream, false, true);
         }
