@@ -1,0 +1,11 @@
+﻿{
+  "frameworks": {
+    "net46":{
+      "dependencies": {
+        "Microsoft.ProjectOxford.Face": "1.2.1.2",
+        "Newtonsoft.Json": "9.0.1",
+        "ImageProcessor": "2.5.1"
+      }
+    }
+  }
+}
