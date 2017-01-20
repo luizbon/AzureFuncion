@@ -1,6 +1,7 @@
 ﻿using System.Net;
 using System.Net.Http;
 using AngleSharp;
+using AngleSharp.Dom;
 
 public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextWriter outputFile, TraceWriter log)
 {
