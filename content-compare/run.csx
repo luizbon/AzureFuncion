@@ -41,7 +41,7 @@ public static string SelectPrice(IDocument document)
 
 public static string SelectName(IDocument document)
 {
-    var brandSelector = "div.brand h1";
-    var brandH1 = document.QuerySelectorAll(brandSelector);
-    return brandH1.First().TextContent.Trim();
+    var headingSelector = "h1";
+    var heading = document.QuerySelectorAll(headingSelector);
+    return heading.First().TextContent.Trim();
 }
