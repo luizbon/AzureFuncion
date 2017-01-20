@@ -11,21 +11,36 @@ public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextW
     var config = Configuration.Default.WithDefaultLoader();
     var address = "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/";
     var document = await BrowsingContext.New(config).OpenAsync(address);
-    var priceSelector = "p.price span.amount";
-    var priceSpan = document.QuerySelectorAll(priceSelector);
-    var price = priceSpan.First().TextContent.Replace("$", "").Trim();
+
+    var price = SelectPrice(document);
 
     if (price != input)
     {
         input = price;
 
+        var name = SelectName(document);
+
         using (var client = new HttpClient())
         {
-            var response = await client.PostAsync(url, new StringContent($"microsoft-surface-book-i7-1tb-16gb-ram price is: ${input}"));
+            var response = await client.PostAsync(url, new StringContent($"{name} price is ${input}"));
 
             await response.Content.ReadAsStringAsync();
         }
     }
 
     await outputFile.WriteAsync(input);
+}
+
+public static string SelectPrice(IDocument document)
+{
+    var priceSelector = "p.price span.amount";
+    var priceSpan = document.QuerySelectorAll(priceSelector);
+    return priceSpan.First().TextContent.Replace("$", "").Trim();
+}
+
+public static string SelectName(IDocument document)
+{
+    var brandSelector = "div.brand h1";
+    var priceH1 = document.QuerySelectorAll(brandSelector);
+    return priceH1.First().TextContent.Trim();
 }
