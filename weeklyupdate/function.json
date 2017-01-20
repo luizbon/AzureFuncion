@@ -15,8 +15,8 @@
       "type": "apiHubFile",
       "name": "inputFile",
       "path": "OFX/team.txt",
-      "connection": "onedriveforbusiness1_ONEDRIVEFORBUSINESS",
-      "direction": "in"
+      "direction": "in",
+      "connection": "onedrive_ONEDRIVE"
     }
   ],
   "disabled": false
