@@ -21,7 +21,7 @@ public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextW
 
         using (var client = new HttpClient())
         {
-            var response = await client.PostAsync(url, new StringContent(input));
+            var response = await client.PostAsync(url, new StringContent($"microsoft-surface-book-i7-1tb-16gb-ram price is: ${input}"));
 
             await response.Content.ReadAsStringAsync();
         }
