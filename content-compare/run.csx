@@ -4,5 +4,5 @@ using Implementation;
 
 public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextWriter outputFile, TraceWriter log)
 {
-    return await ContentCompare(inputFile, outputFile);
+    return await ContentCompare.Run(inputFile, outputFile);
 }
