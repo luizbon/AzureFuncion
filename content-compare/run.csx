@@ -2,7 +2,7 @@
 using System.Net;
 using Implementation;
 
-public static Task Run(TimerInfo timerTrigger, TextReader inputFile, TextWriter outputFile, TraceWriter log)
+public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextWriter outputFile, TraceWriter log)
 {
-    return ContentCompare.Run(inputFile, outputFile);
+    await ContentCompare.Run(inputFile, outputFile);
 }

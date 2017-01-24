@@ -17,17 +17,7 @@ namespace Tests
         public ContentCompareTests(ITestOutputHelper output)
         {
             _output = output;
-            _inputFile = new StringReader(@"[{
-                url: 'https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/',
-                content: '',
-                selector: 'p.price span.amount',
-                titleSelector: 'h1'
-            },{
-                url: 'https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/',
-                content: '',
-                selector: 'p.price span.amount',
-                titleSelector: 'h1'
-            }]");
+            _inputFile = new StringReader(File.ReadAllText(@"C:\code\github\luizbon\AzureFuncion\Tests\Files\content-compare.json"));
 
             var mockHttpClient = new Mock<IHttpClient>();
 

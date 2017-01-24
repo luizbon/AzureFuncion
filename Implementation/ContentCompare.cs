@@ -1,4 +1,5 @@
-﻿using System.IO;
+﻿using System;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AngleSharp;
@@ -18,25 +19,31 @@ namespace Implementation
 
             var contents = JsonConvert.DeserializeObject<Content[]>(await inputFile.ReadToEndAsync());
 
-            foreach (var content in contents)
+            try
             {
-                var config = Configuration.Default.WithDefaultLoader();
-                var address = content.url;
-                var document = await BrowsingContext.New(config).OpenAsync(address);
-
-                var price = SelectPrice(document, content.selector);
-
-                if (price != content.content)
+                foreach (var content in contents)
                 {
-                    var name = SelectName(document, content.titleSelector);
+                    var config = Configuration.Default.WithDefaultLoader();
+                    var address = content.url;
+                    var document = await BrowsingContext.New(config).OpenAsync(address);
 
-                    await HttpClient.PostStringAsync(url, $"{name} price changed from ${content.content} to ${price}");
+                    var price = SelectPrice(document, content.selector);
 
-                    content.content = price;
+                    if (price != content.content)
+                    {
+                        var name = SelectName(document, content.titleSelector);
+
+                        await HttpClient.PostStringAsync(url,
+                            $"{name} price changed from ${content.content} to ${price}");
+
+                        content.content = price;
+                    }
                 }
             }
-            
-            await outputFile.WriteAsync(JsonConvert.SerializeObject(contents, Formatting.Indented));
+            finally
+            {
+                await outputFile.WriteAsync(JsonConvert.SerializeObject(contents, Formatting.Indented));
+            }
         }
 
         public static string SelectPrice(IDocument document, string priceSelector)

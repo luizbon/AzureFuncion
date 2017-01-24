@@ -1,10 +1,10 @@
 ﻿[
-  {
-    "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/",
-    "content": "4199",
-    "selector": "p.price span.amount",
-    "titleSelector": "h1"
-  },
+    {
+        "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/",
+        "content": "4199",
+        "selector": "p.price span.amount",
+        "titleSelector": "h1"
+    },
     {
         "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/",
         "content": "4398",
@@ -77,10 +77,22 @@
         "selector": "p.price span.amount",
         "titleSelector": "h1"
     },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/laptops/alienware/alienware-17-17-3-gaming-laptop/954239/",
+    "content": "3198",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1"
+  },
     {
-        "url": "https://www.jbhifi.com.au/computers-tablets/laptops/alienware/alienware-17-17-3-gaming-laptop/954239/",
+        "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521296au&model_id=xps-15-9560-laptop",
+        "content": "899",
+        "selector": ".mag .priceBlock .pAmt",
+        "titleSelector": "div.plris .prcFlBar h2.prcBarHeader"
+    },
+    {
+        "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521297au&model_id=xps-15-9560-laptop",
         "content": "3198",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
+        "selector": ".mag .priceBlock .pAmt",
+        "titleSelector": "div.plris .prcFlBar h2.prcBarHeader"
     }
 ]
