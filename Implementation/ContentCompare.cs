@@ -37,7 +37,7 @@ namespace Implementation
             }
 
 
-            await outputFile.WriteAsync(JsonConvert.SerializeObject(contents));
+            await outputFile.WriteAsync(JsonConvert.SerializeObject(contents, Formatting.Indented));
         }
 
         public static string SelectPrice(IDocument document, string priceSelector)
