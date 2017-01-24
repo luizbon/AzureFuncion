@@ -22,7 +22,11 @@ namespace Tests
             var mockHttpClient = new Mock<IHttpClient>();
 
             mockHttpClient.Setup(x => x.PostStringAsync(It.IsAny<string>(), It.IsAny<string>()))
-                .Callback<string, string>((url, content) => _output.WriteLine(content));
+                .Returns<string, string>((url, content) =>
+                {
+                    _output.WriteLine(content);
+                    return null;
+                });
 
             ContentCompare.HttpClient = new Mock<IHttpClient>().Object;
         }

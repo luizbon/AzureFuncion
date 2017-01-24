@@ -14,9 +14,6 @@ namespace Implementation
 
         public static async Task Run(TextReader inputFile, TextWriter outputFile)
         {
-            var url =
-                "https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY";
-
             var contents = JsonConvert.DeserializeObject<Content[]>(await inputFile.ReadToEndAsync());
 
             try
@@ -33,8 +30,10 @@ namespace Implementation
                     {
                         var name = SelectName(document, content.titleSelector);
 
-                        await HttpClient.PostStringAsync(url,
-                            $"{name} price changed from ${content.content} to ${price}");
+                        Parallel.ForEach(content.push, url =>
+                            HttpClient.PostStringAsync(url,
+                                $"{name} price changed from ${content.content} to ${price}")
+                        );
 
                         content.content = price;
                     }
@@ -65,5 +64,6 @@ namespace Implementation
         public string content { get; set; }
         public string selector { get; set; }
         public string titleSelector { get; set; }
+        public string[] push { get; set; }
     }
 }

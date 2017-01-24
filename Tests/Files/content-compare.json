@@ -1,98 +1,114 @@
 ﻿[
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/",
-        "content": "4199",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/",
-        "content": "4398",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-1tb-16gb-ram/326450/",
-        "content": "5198",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-1tb-tablet/977136/",
-        "content": "4047",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-256gb-8gb-ram/326448/",
-        "content": "3797",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-512gb-tablet/837958/",
-        "content": "3248",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-256gb-8gb-ram/885413/",
-        "content": "2946",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-16gb-ram/837957/",
-        "content": "2648",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-8gb-ram/837959/",
-        "content": "2298",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-128gb-8gb-ram/885410/",
-        "content": "2297",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-256gb-tablet/837960/",
-        "content": "1848",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-128gb-tablet/837956/",
-        "content": "1497",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
-    {
-        "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-corem-128gb-tablet/317884/",
-        "content": "899",
-        "selector": "p.price span.amount",
-        "titleSelector": "h1"
-    },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/",
+    "content": "4199",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/",
+    "content": "4398",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-1tb-16gb-ram/326450/",
+    "content": "5198",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-1tb-tablet/977136/",
+    "content": "4047",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-256gb-8gb-ram/326448/",
+    "content": "3797",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-512gb-tablet/837958/",
+    "content": "3248",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-256gb-8gb-ram/885413/",
+    "content": "2946",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-16gb-ram/837957/",
+    "content": "2648",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-8gb-ram/837959/",
+    "content": "2298",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-128gb-8gb-ram/885410/",
+    "content": "2297",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-256gb-tablet/837960/",
+    "content": "1848",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-128gb-tablet/837956/",
+    "content": "1497",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-corem-128gb-tablet/317884/",
+    "content": "899",
+    "selector": "p.price span.amount",
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/laptops/alienware/alienware-17-17-3-gaming-laptop/954239/",
     "content": "3198",
     "selector": "p.price span.amount",
-    "titleSelector": "h1"
+    "titleSelector": "h1",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
   },
-    {
-        "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521296au&model_id=xps-15-9560-laptop",
-        "content": "899",
-        "selector": ".mag .priceBlock .pAmt",
-        "titleSelector": "div.plris .prcFlBar h2.prcBarHeader"
-    },
-    {
-        "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521297au&model_id=xps-15-9560-laptop",
-        "content": "3198",
-        "selector": ".mag .priceBlock .pAmt",
-        "titleSelector": "div.plris .prcFlBar h2.prcBarHeader"
-    }
+  {
+    "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521296au&model_id=xps-15-9560-laptop",
+    "content": "2,599.00*",
+    "selector": ".mag .priceBlock .pAmt",
+    "titleSelector": "div.plris .prcFlBar h2.prcBarHeader",
+    "push": ["https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY"]
+  },
+  {
+    "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521297au&model_id=xps-15-9560-laptop",
+    "content": "3,099.00*",
+    "selector": ".mag .priceBlock .pAmt",
+    "titleSelector": "div.plris .prcFlBar h2.prcBarHeader",
+    "push": [ "https://prod-06.australiasoutheast.logic.azure.com:443/workflows/904acfab0cc041ea94af1a98867cc9f2/triggers/manual/run?api-version=2015-08-01-preview&sp=%2Ftriggers%2Fmanual%2Frun&sv=1.0&sig=pYfItovg26uxQXJVXFHEGZcGABDZjKf-xVcVZhvBulY" ]
+  }
 ]
