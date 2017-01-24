@@ -35,8 +35,7 @@ namespace Implementation
                     content.content = price;
                 }
             }
-
-
+            
             await outputFile.WriteAsync(JsonConvert.SerializeObject(contents, Formatting.Indented));
         }
 

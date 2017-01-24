@@ -22,6 +22,11 @@ namespace Tests
                 content: '',
                 selector: 'p.price span.amount',
                 titleSelector: 'h1'
+            },{
+                url: 'https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/',
+                content: '',
+                selector: 'p.price span.amount',
+                titleSelector: 'h1'
             }]");
 
             var mockHttpClient = new Mock<IHttpClient>();
