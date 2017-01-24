@@ -1,8 +1,8 @@
-﻿#r Implementation.dll
+﻿#r "Implementation.dll"
 using System.Net;
 using Implementation;
 
 public static async Task Run(TimerInfo timerTrigger, TextReader inputFile, TextWriter outputFile, TraceWriter log)
 {
-    return ContentCompare(inputFile, outputFile);
+    return await ContentCompare(inputFile, outputFile);
 }
