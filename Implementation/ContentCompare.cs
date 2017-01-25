@@ -1,9 +1,11 @@
 ﻿using System;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using AngleSharp;
 using AngleSharp.Dom;
+using AngleSharp.Extensions;
 using Microsoft.Azure.WebJobs.Host;
 using Newtonsoft.Json;
 
@@ -42,7 +44,7 @@ namespace Implementation
             var config = Configuration.Default.WithDefaultLoader();
             var address = content.url;
             var document = await BrowsingContext.New(config).OpenAsync(address);
-
+            
             var selectedContent = SelectContent(document, content.selector);
 
             if (selectedContent == content.content) return content.content;
@@ -63,16 +65,21 @@ namespace Implementation
             }
         }
 
-        public static string SelectContent(IDocument document, string priceSelector)
+        private static string SelectContent(IDocument document, string contentSelector)
         {
-            var priceSpan = document.QuerySelectorAll(priceSelector);
-            return priceSpan.First().TextContent.Trim();
+            var content = document.QuerySelectorAll(contentSelector);
+            return NormalizeString(content.First().TextContent);
         }
 
-        public static string SelectName(IDocument document, string titleSelector)
+        private static string SelectName(IDocument document, string titleSelector)
         {
-            var heading = document.QuerySelectorAll(titleSelector);
-            return heading.First().TextContent.Trim();
+            var title = document.QuerySelectorAll(titleSelector);
+            return NormalizeString(title.First().TextContent);
+        }
+
+        private static string NormalizeString(string input)
+        {
+            return string.Join(" ", input.Split('\n').Select(x => x.Trim())).Trim();
         }
     }
 
