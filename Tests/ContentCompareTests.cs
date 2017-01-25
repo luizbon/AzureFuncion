@@ -36,7 +36,7 @@ namespace Tests
         {
             var sb = new StringBuilder();
 
-            await ContentCompare.Run(_inputFile, new StringWriter(sb));
+            await ContentCompare.Run(_inputFile, new StringWriter(sb), null);
 
             _output.WriteLine(sb.ToString());
         }

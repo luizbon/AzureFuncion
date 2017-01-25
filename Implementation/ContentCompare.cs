@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using AngleSharp;
 using AngleSharp.Dom;
+using Microsoft.Azure.WebJobs.Host;
 using Newtonsoft.Json;
 
 namespace Implementation
@@ -12,7 +13,7 @@ namespace Implementation
     {
         public static IHttpClient HttpClient { get; set; } = new HttpClient();
 
-        public static async Task Run(TextReader inputFile, TextWriter outputFile)
+        public static async Task Run(TextReader inputFile, TextWriter outputFile, TraceWriter log)
         {
             var contents = JsonConvert.DeserializeObject<Content[]>(await inputFile.ReadToEndAsync());
 
@@ -20,22 +21,13 @@ namespace Implementation
             {
                 foreach (var content in contents)
                 {
-                    var config = Configuration.Default.WithDefaultLoader();
-                    var address = content.url;
-                    var document = await BrowsingContext.New(config).OpenAsync(address);
-
-                    var price = SelectPrice(document, content.selector);
-
-                    if (price != content.content)
+                    try
                     {
-                        var name = SelectName(document, content.titleSelector);
-
-                        Parallel.ForEach(content.push, url =>
-                            HttpClient.PostStringAsync(url,
-                                $"{name} price changed from ${content.content} to ${price}")
-                        );
-
-                        content.content = price;
+                        content.content = await ProcessContent(content);
+                    }
+                    catch (Exception e)
+                    {
+                        log.Error("Fail to process content", e);
                     }
                 }
             }
@@ -45,15 +37,41 @@ namespace Implementation
             }
         }
 
-        public static string SelectPrice(IDocument document, string priceSelector)
+        private static async Task<string> ProcessContent(Content content)
         {
-            var priceSpan = document.QuerySelectorAll(priceSelector);
-            return priceSpan.First().TextContent.Replace("$", "").Trim();
+            var config = Configuration.Default.WithDefaultLoader();
+            var address = content.url;
+            var document = await BrowsingContext.New(config).OpenAsync(address);
+
+            var selectedContent = SelectContent(document, content.selector);
+
+            if (selectedContent == content.content) return content.content;
+
+            var name = SelectName(document, content.titleSelector);
+
+            await SendNotifications(content, name, selectedContent);
+            
+            return selectedContent;
         }
 
-        public static string SelectName(IDocument document, string headingSelector)
+        private static async Task SendNotifications(Content content, string name, string selectedContent)
         {
-            var heading = document.QuerySelectorAll(headingSelector);
+            foreach (var url in content.push)
+            {
+                await HttpClient.PostStringAsync(url,
+                    $"{name} content changed from {content.content} to {selectedContent}");
+            }
+        }
+
+        public static string SelectContent(IDocument document, string priceSelector)
+        {
+            var priceSpan = document.QuerySelectorAll(priceSelector);
+            return priceSpan.First().TextContent.Trim();
+        }
+
+        public static string SelectName(IDocument document, string titleSelector)
+        {
+            var heading = document.QuerySelectorAll(titleSelector);
             return heading.First().TextContent.Trim();
         }
     }
