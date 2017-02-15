@@ -10,7 +10,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i7-1tb-16gb-ram/977137/",
-    "content": "$\n                4199",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -19,7 +19,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-512gb-16gb-ram/326449/",
-    "content": "$\n                4398",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -28,7 +28,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-1tb-16gb-ram/326450/",
-    "content": "$\n                5198",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -37,7 +37,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-1tb-tablet/977136/",
-    "content": "$\n                4047",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -46,7 +46,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-book-with-performance-base-i7-256gb-8gb-ram/326448/",
-    "content": "$\n                3797",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -55,7 +55,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-512gb-tablet/837958/",
-    "content": "$\n                3248",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -64,7 +64,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-256gb-8gb-ram/885413/",
-    "content": "$\n                2946",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -73,7 +73,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-16gb-ram/837957/",
-    "content": "$\n                2648",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -82,7 +82,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i7-256gb-tablet-8gb-ram/837959/",
-    "content": "$\n                2298",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -91,7 +91,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/laptops/microsoft/microsoft-surface-book-i5-128gb-8gb-ram/885410/",
-    "content": "$\n                2297",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -100,7 +100,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-256gb-tablet/837960/",
-    "content": "$\n                1848",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -109,7 +109,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-i5-128gb-tablet/837956/",
-    "content": "$\n                1497",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -118,7 +118,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/tablets/microsoft/microsoft-surface-pro-4-corem-128gb-tablet/317884/",
-    "content": "$\n                899",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -127,7 +127,7 @@
   },
   {
     "url": "https://www.jbhifi.com.au/computers-tablets/laptops/alienware/alienware-17-17-3-gaming-laptop/954239/",
-    "content": "$\n                3198",
+    "content": "",
     "selector": "p.price span.amount",
     "titleSelector": "h1",
     "push": [
@@ -136,7 +136,7 @@
   },
   {
     "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521296au&model_id=xps-15-9560-laptop",
-    "content": "$2,599.00*",
+    "content": "",
     "selector": ".mag .priceBlock .pAmt",
     "titleSelector": "div.plris .prcFlBar h2.prcBarHeader",
     "push": [
@@ -145,7 +145,7 @@
   },
   {
     "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521297au&model_id=xps-15-9560-laptop",
-    "content": "$3,099.00*",
+    "content": "",
     "selector": ".mag .priceBlock .pAmt",
     "titleSelector": "div.plris .prcFlBar h2.prcBarHeader",
     "push": [
@@ -154,7 +154,7 @@
   },
   {
     "url": "http://www.dell.com/au/business/p/xps-15-9560-laptop/pd?oc=z521298au&model_id=xps-15-9560-laptop",
-    "content": "$3,799.00*",
+    "content": "",
     "selector": ".mag .priceBlock .pAmt",
     "titleSelector": "div.plris .prcFlBar h2.prcBarHeader",
     "push": [
@@ -163,7 +163,7 @@
   },
   {
     "url": "http://www.myer.com.au/shop/mystore/w16-electrical-home-appliances/dyson-209568-01-v6-absolute",
-    "content": "was $899.00 now $549.00",
+    "content": "",
     "selector": ".price",
     "titleSelector": "h2.myer-arial-regular",
     "push": [

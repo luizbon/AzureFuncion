@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.IO;
 using System.Linq;
+using System.Net.Http;
 using System.Threading.Tasks;
 using AngleSharp;
 using AngleSharp.Dom;
@@ -13,8 +14,6 @@ namespace Implementation
 {
     public static class ContentCompare
     {
-        public static IHttpClient HttpClient { get; set; } = new HttpClient();
-
         public static async Task Run(TextReader inputFile, TextWriter outputFile, TraceWriter log)
         {
             var contents = JsonConvert.DeserializeObject<Content[]>(await inputFile.ReadToEndAsync());
@@ -58,10 +57,18 @@ namespace Implementation
 
         private static async Task SendNotifications(Content content, string name, string selectedContent)
         {
-            foreach (var url in content.push)
+            using (var client = new HttpClient())
             {
-                await HttpClient.PostStringAsync(url,
-                    $"{name} content changed from {content.content} to {selectedContent}");
+                foreach (var url in content.push)
+                {
+                    var jsonObject = new
+                    {
+                        content.url,
+                        message = $"{name} content changed from {content.content} to {selectedContent}",
+                        title = name
+                    };
+                    await client.PostAsJsonAsync(url, jsonObject);
+                }
             }
         }
 

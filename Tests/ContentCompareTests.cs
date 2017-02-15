@@ -3,7 +3,9 @@ using System.IO;
 using System.Text;
 using System.Threading.Tasks;
 using Implementation;
+using Microsoft.Azure.WebJobs.Host;
 using Moq;
+using Newtonsoft.Json.Serialization;
 using Xunit;
 using Xunit.Abstractions;
 
@@ -18,17 +20,6 @@ namespace Tests
         {
             _output = output;
             _inputFile = new StringReader(File.ReadAllText(@"C:\code\github\luizbon\AzureFuncion\Tests\Files\content-compare.json"));
-
-            var mockHttpClient = new Mock<IHttpClient>();
-
-            mockHttpClient.Setup(x => x.PostStringAsync(It.IsAny<string>(), It.IsAny<string>()))
-                .Returns<string, string>((url, content) =>
-                {
-                    _output.WriteLine(content);
-                    return null;
-                });
-
-            ContentCompare.HttpClient = new Mock<IHttpClient>().Object;
         }
 
         [Fact]
@@ -36,9 +27,20 @@ namespace Tests
         {
             var sb = new StringBuilder();
 
-            await ContentCompare.Run(_inputFile, new StringWriter(sb), null);
+            await ContentCompare.Run(_inputFile, new StringWriter(sb), new NullTraceWriter(TraceLevel.Off));
 
             _output.WriteLine(sb.ToString());
+        }
+
+        public class NullTraceWriter : TraceWriter
+        {
+            public NullTraceWriter(TraceLevel level) : base(level)
+            {
+            }
+
+            public override void Trace(TraceEvent traceEvent)
+            {
+            }
         }
     }
 }
